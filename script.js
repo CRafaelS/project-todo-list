@@ -5,7 +5,7 @@ function Add() {
     const taskList = document.getElementById('lista-tarefas');
     const task = document.getElementById('texto-tarefa');
     const createList = document.createElement('li');
-
+    
     createList.innerHTML = task.value;
     taskList.appendChild(createList);
     task.value = '';

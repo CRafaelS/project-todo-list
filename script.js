@@ -14,13 +14,14 @@ function Add() {
 }
 button.addEventListener('click', Add);
 
-//https://pt.stackoverflow.com/questions/146423/como-adicionar-e-remover-classes-com-javascript
+// https://pt.stackoverflow.com/questions/146423/como-adicionar-e-remover-classes-com-javascript
+
 const taskList = document.getElementById('lista-tarefas');
 
 function changeBG(event) {
   const check = document.getElementsByTagName('li');
   for (let i = 0; i < check.length; i += 1) {
-    if(check[i].classList.contains('select')) {
+    if (check[i].classList.contains('select')) {
       check[i].classList.remove('select');
     }
   }

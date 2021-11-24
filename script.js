@@ -28,3 +28,19 @@ function changeBG(event) {
   event.target.classList.add('select');
 }
 taskList.addEventListener('click', changeBG);
+
+// https://www.w3schools.com/jsref/event_ondblclick.asp
+
+taskList.addEventListener('dblclick', completDpClick);
+
+function completDpClick(e) {
+  if (e.target.classList.contains('select')) {
+    e.target.classList.remove('select');
+    if(e.target.classList.contains('completed')) {
+      e.target.classList.remove('completed');
+    }
+    else {
+      e.target.classList.add('completed');
+    }
+  }
+}

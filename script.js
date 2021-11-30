@@ -66,21 +66,20 @@ function finished() {
 }
 cleanFinished.addEventListener('click', finished);
 
-// const save = document.getElementById('salvar-tarefas');
+const save = document.getElementById('salvar-tarefas');
 
-// function salvar() {
-//   localStorage.setItem('save', taskList.innerHTML);
-// }
-// save.addEventListener('click', salvar);
+function salvar() {
+  localStorage.setItem('save', taskList.innerHTML);
+}
+save.addEventListener('click', salvar);
 
-// localStorage.getItem('save');
+localStorage.getItem('save');
 
-// function loadlist() {
-//   const load = localStorage.getItem('save');
-//   taskList.appendChild(load);
-// }
+function loadlist() {
+  taskList.innerHTML = localStorage.getItem('save');
+}
 
-// window.onload = loadlist;
+window.onload = loadlist;
 
 const removeSelect = document.getElementById('remover-selecionado');
 

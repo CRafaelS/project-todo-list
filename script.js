@@ -47,7 +47,6 @@ taskList.addEventListener('dblclick', completDpClick);
 const clearList = document.getElementById('apaga-tudo');
 
 function clearAll() {
-  // alert ('Toda Lista será apagada');
   const clear = document.getElementsByTagName('li');
   for (let i = clear.length - 1; i >= 0; i -= 1) {
     clear[i].remove('Lista');
@@ -66,3 +65,31 @@ function finished() {
   }
 }
 cleanFinished.addEventListener('click', finished);
+
+// const save = document.getElementById('salvar-tarefas');
+
+// function salvar() {
+//   localStorage.setItem('save', taskList.innerHTML);
+// }
+// save.addEventListener('click', salvar);
+
+// localStorage.getItem('save');
+
+// function loadlist() {
+//   const load = localStorage.getItem('save');
+//   taskList.appendChild(load);
+// }
+
+// window.onload = loadlist;
+
+const removeSelect = document.getElementById('remover-selecionado');
+
+function rmSelect() {
+  const readList = document.getElementsByTagName('li');
+  for (let i = readList.length - 1; i >= 0; i -= 1) {
+    if (readList[i].classList.contains('select')) {
+      readList[i].remove('select');
+    }
+  }
+}
+removeSelect.addEventListener('click', rmSelect);
